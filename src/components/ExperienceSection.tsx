@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography, Container, Grid, Divider } from '@mui/material';
+import { Box, Typography, Container, Divider } from '@mui/material';
 
 interface Experience {
   title: string;
