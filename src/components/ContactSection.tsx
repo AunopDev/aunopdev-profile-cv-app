@@ -1,12 +1,11 @@
 import React from 'react';
-import { Box, Container, Typography, IconButton, TextField, Button } from '@mui/material';
+import { Box, Container, Typography, IconButton, TextField, Button, Link } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
-import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 
-const Footer: React.FC = () => {
+const ContactSection: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
@@ -14,52 +13,54 @@ const Footer: React.FC = () => {
       id="contact"
       component="footer"
       sx={{
-        py: 8,
+        py: 0.1,
         backgroundColor: 'background.default',
       }}
     >
       <Container maxWidth="lg">
-        <Typography
-          variant="h2"
-          component="h2"
-          sx={{
-            mb: 5,
-            fontSize: { xs: '1.75rem', md: '2.5rem' },
-            fontWeight: 600,
-          }}
-        >
-          LET'S CONNECT
-        </Typography>
-
         <Box
           sx={{
             display: 'grid',
-            gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, // จัดเลย์เอาต์เป็น 2 คอลัมน์บนหน้าจอขนาด md ขึ้นไป
-            gap: 4,
+            gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' },
+            gap: 2,
           }}
         >
           <Box>
-            <Typography variant="body1" sx={{ mb: 3, color: 'text.secondary' }}>
-              Say hello at chanintornc@sau.ac.th
+            <Typography
+              variant="h2"
+              component="h2"
+              sx={{
+                mb: 3,
+                fontSize: { xs: '1.75rem', md: '2.5rem' },
+                fontWeight: 600,
+              }}
+            >
+              LET'S CONNECT
+            </Typography>
+            <Typography variant="body1" sx={{ mb: 0.5, color: 'text.secondary' }}>
+              Say hello at <Link href="mailto:chanintornc@sau.ac.th" sx={{ color: 'text.secondary', textDecoration: 'underline' }}>chanintornc@sau.ac.th</Link>
+            </Typography>
+            <Typography variant="body1" sx={{ mb: 2, color: 'text.secondary' }}>
+              For more info, here's my <Link href="#" sx={{ color: 'primary.main', textDecoration: 'underline' }}>resume</Link>
             </Typography>
 
-            <Box sx={{ display: 'flex', gap: 1, mb: 4 }}>
-              <IconButton aria-label="linkedin" sx={{ color: 'text.secondary', '&:hover': { color: 'primary.main' } }}>
+            <Box sx={{ display: 'flex', gap: 0.5, mb: 2 }}>
+              <IconButton aria-label="linkedin" sx={{ color: 'text.secondary', '&:hover': { color: 'primary.main' }, p: 0.5 }}>
                 <LinkedInIcon />
               </IconButton>
-              <IconButton aria-label="github" sx={{ color: 'text.secondary', '&:hover': { color: 'primary.main' } }}>
+              <IconButton aria-label="github" sx={{ color: 'text.secondary', '&:hover': { color: 'primary.main' }, p: 0.5 }}>
                 <GitHubIcon />
               </IconButton>
-              <IconButton aria-label="twitter" sx={{ color: 'text.secondary', '&:hover': { color: 'primary.main' } }}>
+              <IconButton aria-label="twitter" sx={{ color: 'text.secondary', '&:hover': { color: 'primary.main' }, p: 0.5 }}>
                 <TwitterIcon />
               </IconButton>
-              <IconButton aria-label="instagram" sx={{ color: 'text.secondary', '&:hover': { color: 'primary.main' } }}>
+              <IconButton aria-label="instagram" sx={{ color: 'text.secondary', '&:hover': { color: 'primary.main' }, p: 0.5 }}>
                 <InstagramIcon />
               </IconButton>
             </Box>
           </Box>
 
-          <Box component="form" noValidate autoComplete="off">
+          <Box component="form" noValidate autoComplete="off" sx={{ width: '100%' }}>
             <Box>
               <TextField
                 fullWidth
@@ -67,7 +68,7 @@ const Footer: React.FC = () => {
                 label="Name"
                 variant="outlined"
                 sx={{
-                  mb: 2,
+                  mb: 1,
                   '& .MuiOutlinedInput-root': {
                     '& fieldset': {
                       borderColor: 'rgba(255, 255, 255, 0.1)',
@@ -86,7 +87,7 @@ const Footer: React.FC = () => {
                 label="Email"
                 variant="outlined"
                 sx={{
-                  mb: 2,
+                  mb: 1,
                   '& .MuiOutlinedInput-root': {
                     '& fieldset': {
                       borderColor: 'rgba(255, 255, 255, 0.1)',
@@ -105,7 +106,7 @@ const Footer: React.FC = () => {
                 label="Subject"
                 variant="outlined"
                 sx={{
-                  mb: 2,
+                  mb: 1,
                   '& .MuiOutlinedInput-root': {
                     '& fieldset': {
                       borderColor: 'rgba(255, 255, 255, 0.1)',
@@ -126,7 +127,7 @@ const Footer: React.FC = () => {
                 rows={4}
                 variant="outlined"
                 sx={{
-                  mb: 3,
+                  mb: 2,
                   '& .MuiOutlinedInput-root': {
                     '& fieldset': {
                       borderColor: 'rgba(255, 255, 255, 0.1)',
@@ -144,33 +145,27 @@ const Footer: React.FC = () => {
                 color="primary"
                 sx={{
                   borderRadius: 50,
-                  px: 3,
-                  py: 1,
-                  fontSize: '0.8rem',
+                  px: 2,
+                  py: 0.5,
+                  fontSize: '1.25rem',
                   textTransform: 'none',
                 }}
               >
-                Submit
+                SUBMIT
               </Button>
+
             </Box>
           </Box>
         </Box>
+        <Typography variant="body2" color="text.secondary">
+          &copy; {currentYear} Chanintorn Chalermsuk
+        </Typography>
 
-        <Box
-          sx={{
-            mt: 6,
-            pt: 3,
-            borderTop: '1px solid rgba(255, 255, 255, 0.05)',
-            textAlign: 'center',
-          }}
-        >
-          <Typography variant="body2" color="text.secondary">
-            &copy; {currentYear} Chanintorn Chalermsuk
-          </Typography>
-        </Box>
+
+
       </Container>
     </Box>
   );
 };
 
-export default Footer;
+export default ContactSection;

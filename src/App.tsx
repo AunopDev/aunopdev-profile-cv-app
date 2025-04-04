@@ -5,7 +5,7 @@ import WorkSection from './components/WorkSection';
 import AboutSection from './components/AboutSection';
 import CapabilitiesSection from './components/CapabilitiesSection';
 import ExperienceSection from './components/ExperienceSection';
-import Footer from './components/ContactSection';
+import ContactSection from './components/ContactSection';
 
 const App: React.FC = () => {
   return (
@@ -15,7 +15,7 @@ const App: React.FC = () => {
       <AboutSection />
       <CapabilitiesSection />
       <ExperienceSection />
-      <Footer />
+      <ContactSection />
     </Box>
   );
 };
