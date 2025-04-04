@@ -31,7 +31,7 @@ const ContactSection: React.FC = () => {
               component="h2"
               sx={{
                 mb: 3,
-                fontSize: { xs: '1.75rem', md: '2.5rem' },
+                fontSize: { xs: '2rem', md: '3rem' },
                 fontWeight: 600,
               }}
             >

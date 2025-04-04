@@ -38,35 +38,35 @@ const ExperienceSection: React.FC = () => {
             gap: 2,
           }}
         >
-          <Box sx={{ flex: { md: '0 0 25%' } }}> {/* ปรับ flex basis */}
+          <Box sx={{ flex: { md: '0 0 35%' } }}>
             <Typography
               variant="h2"
               component="h2"
               sx={{
-                mb: 0.5,
-                fontSize: { xs: '1.2rem', md: '1.8rem' },
+                mb: 1, // ลดระยะห่าง
+                fontSize: { xs: '2rem', md: '2.7rem' }, // ลดขนาดตัวอักษร
                 fontWeight: 600,
               }}
             >
               MY EXPERIENCE
             </Typography>
           </Box>
-          <Box sx={{ flex: { md: '0 0 75%' } }}> {/* ปรับ flex basis */}
+          <Box sx={{ flex: { md: '0 0 75%' } }}>
             {experiences.map((exp, index) => (
-              <Box key={index} sx={{ mb: 1 }}> {/* ปรับ margin bottom */}
-                <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1 }}>
-                  <Typography variant="h6" sx={{ fontWeight: '600', fontSize: '0.9rem' }}>
+              <Box key={index} sx={{ mb: 0.5 }}> {/* ลดระยะห่าง */}
+                <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 0.5 }}> {/* ลดระยะห่าง */}
+                  <Typography variant="h6" sx={{ fontWeight: '600', fontSize: '1.5rem' }}> {/* ลดขนาดตัวอักษร */}
                     {exp.title}
                   </Typography>
-                  <Typography variant="subtitle2" sx={{ color: 'primary.main', fontSize: '0.8rem' }}>
+                  <Typography variant="subtitle2" sx={{ color: 'primary.main', fontSize: '1rem' }}> {/* ลดขนาดตัวอักษร */}
                     {exp.period}
                   </Typography>
                 </Box>
-                <Typography variant="body2" sx={{ color: 'text.secondary', lineHeight: 1.4, fontSize: '0.8rem' }}>
+                <Typography variant="body2" sx={{ color: 'text.secondary', lineHeight: 1.5, fontSize: '1rem' }}> {/* ลดขนาดตัวอักษร */}
                   {exp.description}
                 </Typography>
                 {index < experiences.length - 1 && (
-                  <Divider sx={{ my: 1, borderColor: 'rgba(255, 255, 255, 0.05)' }} />
+                  <Divider sx={{ my: 1.5, borderColor: 'rgba(255, 255, 255, 0.05)' }} />
                 )}
               </Box>
             ))}
@@ -77,7 +77,8 @@ const ExperienceSection: React.FC = () => {
         sx={{
           width: '85%',
           borderTop: '1px solid rgb(110, 110, 110)',
-          margin: '15px auto 0', // ปรับ margin top
+          margin: '35px auto 0',
+          mt: 10,
         }}
       />
     </Box>
