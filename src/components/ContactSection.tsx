@@ -164,7 +164,16 @@ const ContactSection: React.FC = () => {
 
 
       </Container>
+      <Box
+        sx={{
+          width: '85%',
+          borderTop: '1px solid rgb(110, 110, 110)',
+          margin: '70px auto 0',
+          mb: 5,
+        }}
+      />
     </Box>
+
   );
 };
 
