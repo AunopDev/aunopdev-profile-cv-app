@@ -43,8 +43,8 @@ const ExperienceSection: React.FC = () => {
               variant="h2"
               component="h2"
               sx={{
-                mb: 1, // ลดระยะห่าง
-                fontSize: { xs: '2rem', md: '2.7rem' }, // ลดขนาดตัวอักษร
+                mb: 1,
+                fontSize: { xs: '2rem', md: '2.7rem' },
                 fontWeight: 600,
               }}
             >
@@ -53,16 +53,16 @@ const ExperienceSection: React.FC = () => {
           </Box>
           <Box sx={{ flex: { md: '0 0 75%' } }}>
             {experiences.map((exp, index) => (
-              <Box key={index} sx={{ mb: 0.5 }}> {/* ลดระยะห่าง */}
-                <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 0.5 }}> {/* ลดระยะห่าง */}
-                  <Typography variant="h6" sx={{ fontWeight: '600', fontSize: '1.5rem' }}> {/* ลดขนาดตัวอักษร */}
+              <Box key={index} sx={{ mb: 0.5 }}>
+                <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 0.5 }}>
+                  <Typography variant="h6" sx={{ fontWeight: '600', fontSize: '1.5rem' }}>
                     {exp.title}
                   </Typography>
-                  <Typography variant="subtitle2" sx={{ color: 'primary.main', fontSize: '1rem' }}> {/* ลดขนาดตัวอักษร */}
+                  <Typography variant="subtitle2" sx={{ color: 'primary.main', fontSize: '1rem' }}>
                     {exp.period}
                   </Typography>
                 </Box>
-                <Typography variant="body2" sx={{ color: 'text.secondary', lineHeight: 1.5, fontSize: '1rem' }}> {/* ลดขนาดตัวอักษร */}
+                <Typography variant="body2" sx={{ color: 'text.secondary', lineHeight: 1.5, fontSize: '1rem' }}>
                   {exp.description}
                 </Typography>
                 {index < experiences.length - 1 && (

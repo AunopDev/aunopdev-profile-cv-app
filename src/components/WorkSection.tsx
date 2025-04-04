@@ -38,7 +38,7 @@ const WorkSection: React.FC = () => {
         <Box
           sx={{
             display: 'grid',
-            gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, // จัดเลย์เอาต์เป็น 2 คอลัมน์บนหน้าจอขนาด md ขึ้นไป
+            gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' },
             gap: 4,
             alignItems: 'center',
           }}

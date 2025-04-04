@@ -4,17 +4,17 @@ const theme = createTheme({
   palette: {
     mode: 'dark',
     primary: {
-      main: '#d1da90', // Accent color from the design (yellowish-green)
+      main: '#d1da90',
       light: '#e2e7b4',
       dark: '#a5b25f',
     },
     secondary: {
-      main: '#1097f6', // Blue accent from design
+      main: '#1097f6',
       light: '#4db5f8',
       dark: '#0b6bac',
     },
     background: {
-      default: '#161516', // Dark background from design
+      default: '#161516',
       paper: '#1e1d1e',
     },
     text: {

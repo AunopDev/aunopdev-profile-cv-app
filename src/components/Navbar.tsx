@@ -51,7 +51,7 @@ const Navbar: React.FC = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' }); // เพิ่ม block: 'start'
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
       setMobileOpen(false);
     }
   };

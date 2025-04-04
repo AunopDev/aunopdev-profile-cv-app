@@ -61,7 +61,7 @@ const CapabilitiesSection: React.FC = () => {
               <Box
                 sx={{
                   display: 'grid',
-                  gridTemplateColumns: { xs: '1fr 1fr', sm: '1fr 1fr 1fr', md: '1fr 1fr 1fr 1fr' }, // จัดเลย์เอาต์เป็น Grid
+                  gridTemplateColumns: { xs: '1fr 1fr', sm: '1fr 1fr 1fr', md: '1fr 1fr 1fr 1fr' },
                   gap: 4,
                   mt: 4,
                 }}
