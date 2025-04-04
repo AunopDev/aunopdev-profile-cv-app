@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Box, Typography, Button, Container, IconButton, Fade } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import FacebookIcon from '@mui/icons-material/Facebook';
+
 import profileImage from '../assets/images/profile.jpg';
 
 const WorkSection: React.FC = () => {
@@ -55,7 +57,7 @@ const WorkSection: React.FC = () => {
               >
                 HI, I AM<br />
                 <Box component="span" sx={{ color: 'primary.main' }}>
-                  CHANINTORN C.
+                  AUNOP C.
                 </Box>
               </Typography>
 
@@ -68,7 +70,7 @@ const WorkSection: React.FC = () => {
                   maxWidth: '600px',
                 }}
               >
-                นักพัฒนาเว็บไซต์ฝั่งฟรอนท์เอนด์จากประเทศไทย ที่มีความหลงใหลในการสร้าง เว็บไซต์ที่เข้าถึงได้และเป็นมิตรกับผู้ใช้
+                นักศึกษาวิชาเทคโนโลยีดิจิตอลและนวัตกรรม จากมหาวิทยาลัยเอเชียอาคเนย์
               </Typography>
 
               <Box sx={{ display: 'flex', gap: 2, mb: 4, flexWrap: { xs: 'wrap', md: 'nowrap' } }}>
@@ -90,19 +92,39 @@ const WorkSection: React.FC = () => {
 
                 <Box sx={{ display: 'flex', gap: 1 }}>
                   <IconButton
-                    aria-label="linkedin"
-                    size="small"
-                    sx={{ color: 'text.secondary', '&:hover': { color: 'primary.main' } }}
-                  >
-                    <LinkedInIcon sx={{ fontSize: '1.5rem' }} />
-                  </IconButton>
-                  <IconButton
                     aria-label="github"
                     size="small"
                     sx={{ color: 'text.secondary', '&:hover': { color: 'primary.main' } }}
+                    component="a" 
+                    href="https://github.com/AunopDev"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <GitHubIcon sx={{ fontSize: '1.5rem' }} />
                   </IconButton>
+                  <IconButton
+                    aria-label="instagram"
+                    size="small"
+                    sx={{ color: 'text.secondary', '&:hover': { color: 'primary.main' } }}
+                    component="a" 
+                    href="https://www.instagram.com/_.ac29._/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <InstagramIcon sx={{ fontSize: '1.5rem' }} />
+                  </IconButton>
+                  <IconButton
+                    aria-label="facebook"
+                    size="small"
+                    sx={{ color: 'text.secondary', '&:hover': { color: 'primary.main' } }}
+                    component="a" 
+                    href="https://www.facebook.com/NoapNope"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FacebookIcon sx={{ fontSize: '1.5rem' }} />
+                  </IconButton>
+
                 </Box>
               </Box>
             </Box>

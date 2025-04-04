@@ -2,20 +2,22 @@ import React from 'react';
 import { Box, Typography, Container, Paper } from '@mui/material';
 
 const skillCategories = [
+  { name: 'REACT' },
+  { name: 'TypeScript' },
+  { name: 'Vite' },
+  { name: 'Tailwind' },
+  { name: 'FLUTTER' },
+  { name: 'DART' },
   { name: 'HTML' },
   { name: 'CSS' },
   { name: 'JAVASCRIPT' },
-  { name: 'FLUTTER' },
-  { name: 'DART' },
-  { name: 'IoT' },
-  { name: 'REACT' },
   { name: 'DATABASE' },
 ];
 
 const CapabilitiesSection: React.FC = () => {
   return (
     <Box
-      id="capabilities"
+      id="Capabilities"
       component="section"
       sx={{
         py: 10,
@@ -27,7 +29,7 @@ const CapabilitiesSection: React.FC = () => {
           sx={{
             display: 'flex',
             flexDirection: { xs: 'column', md: 'row' },
-            gap: 4,
+            gap: 5,
           }}
         >
           <Box sx={{ flex: { md: '0 0 33.33%' } }}>
@@ -52,7 +54,8 @@ const CapabilitiesSection: React.FC = () => {
                   maxWidth: '800px',
                 }}
               >
-                ผมมองหาโอกาสในการเพิ่มทักษะใหม่ๆ อยู่เสมอ ทั้งการพัฒนาฟรอนท์เอนด์ แบล็กเอนต์ การออกแบบ UX/UI ฐานข้อมูล
+                ผมมองหาโอกาสในการเพิ่มทักษะใหม่ๆอยู่เสมอ ทั้งการพัฒนาฟรอนท์เอนด์ แบ็กเอนต์ การออกแบบ UX/UI ฐานข้อมูล
+                - ทักษะที่มีเป็นเพียงพื้นฐาน สามารถเรียนรู้พัฒนาเพิ่มเติมได้ในอนาคต
               </Typography>
 
               <Box

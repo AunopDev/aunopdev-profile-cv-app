@@ -18,6 +18,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 const navItems = [
   { name: 'Work', id: 'work' },
   { name: 'About', id: 'about' },
+  { name: 'Capabilities', id: 'Capabilities' },
+  { name: 'Experience', id: 'Experience' },
   { name: 'Contact', id: 'contact' },
 ];
 
@@ -57,7 +59,7 @@ const Navbar: React.FC = () => {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', bgcolor: 'background.default', height: '100%' }}>
       <Typography variant="h6" sx={{ my: 2, color: 'primary.main', fontWeight: 'bold' }}>
-        CHARINTORN C.
+        AUNOP C.
       </Typography>
       <List>
         {navItems.map((item) => (
@@ -83,7 +85,7 @@ const Navbar: React.FC = () => {
     >
       <Toolbar sx={{ justifyContent: 'space-between', maxWidth: '1200px', width: '100%', mx: 'auto', px: { xs: 2, sm: 4 } }}>
         <Typography variant="subtitle1" component="div" sx={{ fontWeight: 'bold', letterSpacing: 1 }}>
-          CHANINTORN CHALERMSUK
+          AUNOP CHINNAPONG
         </Typography>
 
         <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 4 }}>

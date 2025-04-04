@@ -1,4 +1,4 @@
-# ninnin-profile-cv-app
+# aunopdev-profile-cv-app
 
 To install dependencies:
 

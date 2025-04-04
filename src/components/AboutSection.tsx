@@ -1,8 +1,9 @@
 import React from 'react';
 import { Box, Typography, Container, Button, IconButton } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import rjarnImage from '../assets/images/rjarn.jpg';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import aboutImage from '../assets/images/about.jpg';
 
 const AboutSection: React.FC = () => {
 
@@ -47,7 +48,7 @@ const AboutSection: React.FC = () => {
                   lineHeight: 1.7,
                 }}
               >
-                ผมเป็นนักพัฒนาเว็บไซต์ฝั่งฟรอนท์เอนด์ที่ทำงานอยู่ใน กรุงเทพฯ กำลังมองหาโอกาสที่น่าตื่นเต้นในการทำงาน มีพื้นฐานการศึกษาด้านวิศวกรรมซอฟต์แวร์
+                ผมเป็นนักศึกษารายวิชา TechnologyDigital And Innovation ที่ South East Asia University
               </Typography>
 
               <Typography
@@ -58,7 +59,7 @@ const AboutSection: React.FC = () => {
                   lineHeight: 1.7,
                 }}
               >
-                ชอบให้ความสำคัญกับการเข้าถึง (accessibility) เมื่อพัฒนาเว็บไซต์ มีความกระตือรือร้นและอยากรู้ อยากเห็นเกี่ยวกับการแก้ปัญหาต่างๆ ปัจจุบันกำลังศึกษาเรียนรู้เกี่ยวกับ React.js และการออกแบบ เว็บไซต์เล็กน้อยเมื่อไม่ได้เขียนโปรแกรม ดิฉัน/ผมชอบเล่นฟุตบอล ถ่ายภาพ และเล่นเกม FIFA, Diablo กำลังเรียนรู้เพิ่มเติมเพื่อพัฒนาทักษะอยู่เสมอ
+                มีความกระตือรือร้นและอยากรู้ อยากเห็นเกี่ยวกับการแก้ปัญหาต่างๆ ปัจจุบันกำลังศึกษาเรียนรู้เกี่ยวกับ React.js และการออกแบบ เว็บไซต์เล็กน้อย เมื่อไม่ได้เขียนโปรแกรม ผมชอบเล่นฟุตบอล และเล่นเกม FIFA, Minecraft, DeadByDaylight กำลังเรียนรู้เพิ่มเติมเพื่อพัฒนาทักษะอยู่เสมอ
               </Typography>
 
               <Box sx={{ display: 'flex', gap: 2, mt: 4, flexWrap: { xs: 'wrap', md: 'nowrap' } }}>
@@ -78,25 +79,39 @@ const AboutSection: React.FC = () => {
                 </Button>
 
                 <Box sx={{ display: 'flex', gap: 1 }}>
-                  <IconButton
-                    aria-label="linkedin"
-                    size="large"
-                    sx={{
-                      color: 'text.secondary',
-                      '&:hover': { color: 'primary.main' },
-                    }}
-                  >
-                    <LinkedInIcon fontSize="medium" />
-                  </IconButton>
+
                   <IconButton
                     aria-label="github"
-                    size="large"
-                    sx={{
-                      color: 'text.secondary',
-                      '&:hover': { color: 'primary.main' },
-                    }}
+                    size="small"
+                    sx={{ color: 'text.secondary', '&:hover': { color: 'primary.main' } }}
+                    component="a"
+                    href="https://github.com/AunopDev"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    <GitHubIcon fontSize="medium" />
+                    <GitHubIcon sx={{ fontSize: '1.5rem' }} />
+                  </IconButton>
+                  <IconButton
+                    aria-label="instagram"
+                    size="small"
+                    sx={{ color: 'text.secondary', '&:hover': { color: 'primary.main' } }}
+                    component="a"
+                    href="https://www.instagram.com/_.ac29._/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <InstagramIcon sx={{ fontSize: '1.5rem' }} />
+                  </IconButton>
+                  <IconButton
+                    aria-label="facebook"
+                    size="small"
+                    sx={{ color: 'text.secondary', '&:hover': { color: 'primary.main' } }}
+                    component="a"
+                    href="https://www.facebook.com/NoapNope"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FacebookIcon sx={{ fontSize: '1.5rem' }} />
                   </IconButton>
                 </Box>
               </Box>
@@ -105,7 +120,7 @@ const AboutSection: React.FC = () => {
         </Box>
         <Box
           component="img"
-          src={rjarnImage}
+          src={aboutImage}
           alt="About Me Image"
           sx={{
             width: '100%',

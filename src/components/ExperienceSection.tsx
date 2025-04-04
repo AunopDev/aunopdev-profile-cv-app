@@ -9,21 +9,21 @@ interface Experience {
 
 const experiences: Experience[] = [
   {
-    title: 'Freelance Developer',
-    period: 'Nov 2023 - Present',
-    description: 'พัฒนาและปรับปรุงส่วนติดต่อผู้ใช้สำหรับเว็บแอปพลิเคชันโดยใช้ React.js ทำงานร่วมกับทีมออกแบบ UX/UI เพื่อสร้างประสบการณ์ผู้ใช้ที่น่าประทับใจ ปรับปรุงความเร็วในการโหลดเว็บไซต์ด้วยเทคนิคการเพิ่มประสิทธิภาพต่างๆ ร่วมพัฒนาและดูแลสไตล์คอมโพเนนท์ภายในองค์กร',
+    title: 'Developer Student',
+    period: '2020 - Present',
+    description: 'เป็นนักศึกษาสาขาวิชาเทคโนโลยีดิจิทัลและนวัตกรรม และเคยฝึกงานอยู่ที่ มหาวิทยาลัยเอเชียอาคเนย์ ปัจจุบันยังศึกษาอยู่',
   },
   {
-    title: 'Front-End Intern',
-    period: 'Sep 2023 - Nov 2023',
-    description: 'พัฒนาเว็บอินเตอร์เฟซโดยใช้ลูกค้าค่าใช้จ่าย HTML, CSS และ JavaScript ช่วยปรับปรุงการเข้าถึง (Accessibility) ของเว็บไซต์ให้สอดคล้องกับมาตรฐาน WCAG ทำงานร่วมกับทีม Backend เพื่อเชื่อมต่อ API',
+    title: 'Electronic Student',
+    period: '2016 - 2019',
+    description: 'เป็นนักเรียนช่างอิเล็กทรอนิกส์ และเคยฝึกงานอยู่ที่ วิทยาลัยเทคโนโลยีฐานเทคโนโลยี จบการศึกษาในปี 2019',
   },
 ];
 
 const ExperienceSection: React.FC = () => {
   return (
     <Box
-      id="experience"
+      id="Experience"
       component="section"
       sx={{
         py: 0.5,

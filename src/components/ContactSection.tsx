@@ -1,9 +1,8 @@
 import React from 'react';
 import { Box, Container, Typography, IconButton, TextField, Button, Link } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import FacebookIcon from '@mui/icons-material/Facebook';
 
 const ContactSection: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -38,24 +37,46 @@ const ContactSection: React.FC = () => {
               LET'S CONNECT
             </Typography>
             <Typography variant="body1" sx={{ mb: 0.5, color: 'text.secondary' }}>
-              Say hello at <Link href="mailto:chanintornc@sau.ac.th" sx={{ color: 'text.secondary', textDecoration: 'underline' }}>chanintornc@sau.ac.th</Link>
+              Say hello at <Link href="mailto:bankforgame2546@gmail.com" sx={{ color: 'text.secondary', textDecoration: 'underline' }}>bankforgame2546@gmail.com</Link>
             </Typography>
             <Typography variant="body1" sx={{ mb: 2, color: 'text.secondary' }}>
               For more info, here's my <Link href="#" sx={{ color: 'primary.main', textDecoration: 'underline' }}>resume</Link>
             </Typography>
 
             <Box sx={{ display: 'flex', gap: 0.5, mb: 2 }}>
-              <IconButton aria-label="linkedin" sx={{ color: 'text.secondary', '&:hover': { color: 'primary.main' }, p: 0.5 }}>
-                <LinkedInIcon />
+
+              <IconButton
+                aria-label="github"
+                size="small"
+                sx={{ color: 'text.secondary', '&:hover': { color: 'primary.main' } }}
+                component="a"
+                href="https://github.com/AunopDev"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <GitHubIcon sx={{ fontSize: '1.5rem' }} />
               </IconButton>
-              <IconButton aria-label="github" sx={{ color: 'text.secondary', '&:hover': { color: 'primary.main' }, p: 0.5 }}>
-                <GitHubIcon />
+              <IconButton
+                aria-label="instagram"
+                size="small"
+                sx={{ color: 'text.secondary', '&:hover': { color: 'primary.main' } }}
+                component="a"
+                href="https://www.instagram.com/_.ac29._/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <InstagramIcon sx={{ fontSize: '1.5rem' }} />
               </IconButton>
-              <IconButton aria-label="twitter" sx={{ color: 'text.secondary', '&:hover': { color: 'primary.main' }, p: 0.5 }}>
-                <TwitterIcon />
-              </IconButton>
-              <IconButton aria-label="instagram" sx={{ color: 'text.secondary', '&:hover': { color: 'primary.main' }, p: 0.5 }}>
-                <InstagramIcon />
+              <IconButton
+                aria-label="facebook"
+                size="small"
+                sx={{ color: 'text.secondary', '&:hover': { color: 'primary.main' } }}
+                component="a"
+                href="https://www.facebook.com/NoapNope"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FacebookIcon sx={{ fontSize: '1.5rem' }} />
               </IconButton>
             </Box>
           </Box>
@@ -158,7 +179,7 @@ const ContactSection: React.FC = () => {
           </Box>
         </Box>
         <Typography variant="body2" color="text.secondary">
-          &copy; {currentYear} Chanintorn Chalermsuk
+          &copy; {currentYear} Aunop Chinnapong (AunopDev)
         </Typography>
 
 
