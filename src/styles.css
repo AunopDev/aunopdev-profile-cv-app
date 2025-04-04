@@ -1,0 +1,65 @@
+:root {
+  --bg-color: #161516;
+  --text-color: #f4f4f4;
+  --primary-color: #d1da90;
+  --secondary-color: #1097f6;
+  --accent-color: #a5b25f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  min-height: 100vh;
+  width: 100%;
+  padding: 80px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e1d1e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #a5b25f;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d1da90;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 40px 0;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+}
