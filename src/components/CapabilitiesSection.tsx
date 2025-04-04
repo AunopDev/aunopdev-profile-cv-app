@@ -22,6 +22,7 @@ const CapabilitiesSection: React.FC = () => {
       sx={{
         py: 10,
         backgroundColor: 'background.default',
+        marginTop: -7.5,
       }}
     >
       <Container maxWidth="lg">

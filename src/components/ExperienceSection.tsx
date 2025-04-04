@@ -28,6 +28,7 @@ const ExperienceSection: React.FC = () => {
       sx={{
         py: 0.5,
         backgroundColor: 'background.default',
+        marginTop: -35,
       }}
     >
       <Container maxWidth="lg">

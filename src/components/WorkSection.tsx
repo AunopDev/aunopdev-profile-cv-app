@@ -90,43 +90,63 @@ const WorkSection: React.FC = () => {
                   CONTACT ME
                 </Button>
 
-                <Box sx={{ display: 'flex', gap: 1 }}>
-                  <IconButton
-                    aria-label="github"
-                    size="small"
-                    sx={{ color: 'text.secondary', '&:hover': { color: 'primary.main' } }}
-                    component="a" 
-                    href="https://github.com/AunopDev"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <GitHubIcon sx={{ fontSize: '1.5rem' }} />
-                  </IconButton>
-                  <IconButton
-                    aria-label="instagram"
-                    size="small"
-                    sx={{ color: 'text.secondary', '&:hover': { color: 'primary.main' } }}
-                    component="a" 
-                    href="https://www.instagram.com/_.ac29._/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <InstagramIcon sx={{ fontSize: '1.5rem' }} />
-                  </IconButton>
-                  <IconButton
-                    aria-label="facebook"
-                    size="small"
-                    sx={{ color: 'text.secondary', '&:hover': { color: 'primary.main' } }}
-                    component="a" 
-                    href="https://www.facebook.com/NoapNope"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FacebookIcon sx={{ fontSize: '1.5rem' }} />
-                  </IconButton>
-
-                </Box>
+                <Button
+                  variant="outlined"
+                  color="primary"
+                  size="small"
+                  component="a"
+                  href="https://hike-go-on.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  sx={{
+                    borderRadius: 50,
+                    px: 3,
+                    py: 0.8,
+                    fontSize: '1.5rem',
+                    textTransform: 'none',
+                  }}
+                >
+                  VISIT MY WEBSITE
+                </Button>
               </Box>
+
+              {/* <Box sx={{ display: 'flex', gap: 1 }}>
+                <IconButton
+                  aria-label="github"
+                  size="small"
+                  sx={{ color: 'text.secondary', '&:hover': { color: 'primary.main' } }}
+                  component="a"
+                  href="https://github.com/AunopDev"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <GitHubIcon sx={{ fontSize: '1.5rem' }} />
+                </IconButton>
+                <IconButton
+                  aria-label="instagram"
+                  size="small"
+                  sx={{ color: 'text.secondary', '&:hover': { color: 'primary.main' } }}
+                  component="a"
+                  href="https://www.instagram.com/_.ac29._/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <InstagramIcon sx={{ fontSize: '1.5rem' }} />
+                </IconButton>
+                <IconButton
+                  aria-label="facebook"
+                  size="small"
+                  sx={{ color: 'text.secondary', '&:hover': { color: 'primary.main' } }}
+                  component="a"
+                  href="https://www.facebook.com/NoapNope"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FacebookIcon sx={{ fontSize: '1.5rem' }} />
+                </IconButton>
+
+              </Box> */}
+
             </Box>
           </Fade>
 

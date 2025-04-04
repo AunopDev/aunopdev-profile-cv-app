@@ -14,6 +14,7 @@ const ContactSection: React.FC = () => {
       sx={{
         py: 0.1,
         backgroundColor: 'background.default',
+        marginTop: -75,
       }}
     >
       <Container maxWidth="lg">
