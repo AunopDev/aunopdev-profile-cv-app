@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Box, Typography, Button, Container, Grid, IconButton, Fade } from '@mui/material';
+import { Box, Typography, Button, Container, IconButton, Fade } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import profileImage from '../assets/images/profile.jpg';
@@ -33,92 +33,95 @@ const WorkSection: React.FC = () => {
       }}
     >
       <Container maxWidth="lg">
-        <Grid container spacing={4} alignItems="center">
-          <Grid item xs={12} md={6}>
-            <Fade in={isVisible} timeout={1000}>
-              <Box>
-                <Typography
-                  variant="h1"
-                  component="h1"
+        <Box
+          sx={{
+            display: 'grid',
+            gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, // จัดเลย์เอาต์เป็น 2 คอลัมน์บนหน้าจอขนาด md ขึ้นไป
+            gap: 4,
+            alignItems: 'center',
+          }}
+        >
+          <Fade in={isVisible} timeout={1000}>
+            <Box>
+              <Typography
+                variant="h1"
+                component="h1"
+                sx={{
+                  fontSize: { xs: '2.5rem', md: '3.5rem' },
+                  fontWeight: 700,
+                  mb: 2,
+                  lineHeight: 1.2,
+                }}
+              >
+                HI, I AM<br />
+                <Box component="span" sx={{ color: 'primary.main' }}>
+                  CHANINTORN C.
+                </Box>
+              </Typography>
+
+              <Typography
+                variant="subtitle1"
+                component="p"
+                sx={{
+                  color: 'text.secondary',
+                  mb: 4,
+                  maxWidth: '600px',
+                }}
+              >
+                นักพัฒนาเว็บไซต์ฝั่งฟรอนท์เอนด์จากประเทศไทย ที่มีความหลงใหลในการสร้าง เว็บไซต์ที่เข้าถึงได้และเป็นมิตรกับผู้ใช้
+              </Typography>
+
+              <Box sx={{ display: 'flex', gap: 2, mb: 4, flexWrap: { xs: 'wrap', md: 'nowrap' } }}>
+                <Button
+                  variant="contained"
+                  color="primary"
+                  size="small"
+                  onClick={scrollToAbout}
                   sx={{
-                    fontSize: { xs: '2.5rem', md: '3.5rem' },
-                    fontWeight: 700,
-                    mb: 2,
-                    lineHeight: 1.2,
+                    borderRadius: 50,
+                    px: 3,
+                    py: 0.8,
+                    fontSize: '1.5rem',
+                    textTransform: 'none',
                   }}
                 >
-                  HI, I AM<br />
-                  <Box component="span" sx={{ color: 'primary.main' }}>
-                    CHANINTORN C.
-                  </Box>
-                </Typography>
+                  CONTACT ME
+                </Button>
 
-                <Typography
-                  variant="subtitle1"
-                  component="p"
-                  sx={{
-                    color: 'text.secondary',
-                    mb: 4,
-                    maxWidth: '600px',
-                  }}
-                >
-                  นักพัฒนาเว็บไซต์ฝั่งฟรอนท์เอนด์จากประเทศไทย ที่มีความหลงใหลในการสร้าง เว็บไซต์ที่เข้าถึงได้และเป็นมิตรกับผู้ใช้
-                </Typography>
-
-                <Box sx={{ display: 'flex', gap: 2, mb: 4, flexWrap: { xs: 'wrap', md: 'nowrap' } }}>
-                  <Button
-                    variant="contained"
-                    color="primary"
+                <Box sx={{ display: 'flex', gap: 1 }}>
+                  <IconButton
+                    aria-label="linkedin"
                     size="small"
-                    onClick={scrollToAbout}
-                    sx={{
-                      borderRadius: 50,
-                      px: 3,
-                      py: 0.8,
-                      fontSize: '1.5rem',
-                      textTransform: 'none',
-                    }}
+                    sx={{ color: 'text.secondary', '&:hover': { color: 'primary.main' } }}
                   >
-                    CONTACT ME
-                  </Button>
-
-                  <Box sx={{ display: 'flex', gap: 1 }}>
-                    <IconButton
-                      aria-label="linkedin"
-                      size="small"
-                      sx={{ color: 'text.secondary', '&:hover': { color: 'primary.main' } }}
-                    >
-                      <LinkedInIcon sx={{ fontSize: '1.5rem' }} />
-                    </IconButton>
-                    <IconButton
-                      aria-label="github"
-                      size="small"
-                      sx={{ color: 'text.secondary', '&:hover': { color: 'primary.main' } }}
-                    >
-                      <GitHubIcon sx={{ fontSize: '1.5rem' }} />
-                    </IconButton>
-                  </Box>
+                    <LinkedInIcon sx={{ fontSize: '1.5rem' }} />
+                  </IconButton>
+                  <IconButton
+                    aria-label="github"
+                    size="small"
+                    sx={{ color: 'text.secondary', '&:hover': { color: 'primary.main' } }}
+                  >
+                    <GitHubIcon sx={{ fontSize: '1.5rem' }} />
+                  </IconButton>
                 </Box>
               </Box>
-            </Fade>
-          </Grid>
+            </Box>
+          </Fade>
 
-          <Grid item xs={12} md={6}>
-            <Fade in={isVisible} timeout={1500}>
-              <Box
-                component="img"
-                src={profileImage}
-                alt="CHANINTORN CHALERMSUK"
-                sx={{
-                  width: '100%',
-                  height: 'auto',
-                  borderRadius: 4,
-                  boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3)',
-                }}
-              />
-            </Fade>
-          </Grid>
-        </Grid>
+          <Fade in={isVisible} timeout={1500}>
+            <Box
+              component="img"
+              src={profileImage}
+              alt="CHANINTORN CHALERMSUK"
+              sx={{
+                width: '100%',
+                height: 'auto',
+                borderRadius: 4,
+                boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3)',
+              }}
+            />
+          </Fade>
+        </Box>
       </Container>
 
       <Box
@@ -131,8 +134,9 @@ const WorkSection: React.FC = () => {
           '@keyframes fadeIn': {
             '0%': { opacity: 0 },
             '100%': { opacity: 1 },
-          }
-        }}></Box>
+          },
+        }}
+      ></Box>
 
       <Box
         sx={{
@@ -150,13 +154,10 @@ const WorkSection: React.FC = () => {
             },
             '60%': {
               transform: 'translateX(-50%) translateY(-10px)',
-            }
-          }
+            },
+          },
         }}
-      >
-
-      </Box>
-      
+      ></Box>
 
       <Box
         sx={{

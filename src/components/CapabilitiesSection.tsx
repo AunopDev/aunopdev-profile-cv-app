@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography, Container, Grid, Paper } from '@mui/material';
+import { Box, Typography, Container, Paper } from '@mui/material';
 
 const skillCategories = [
   { name: 'HTML' },
@@ -55,51 +55,54 @@ const CapabilitiesSection: React.FC = () => {
                 ผมมองหาโอกาสในการเพิ่มทักษะใหม่ๆ อยู่เสมอ ทั้งการพัฒนาฟรอนท์เอนด์ แบล็กเอนต์ การออกแบบ UX/UI ฐานข้อมูล
               </Typography>
 
-              <Grid container spacing={4} justifyContent="flex-start" sx={{ mt: 4 }}>
+              <Box
+                sx={{
+                  display: 'grid',
+                  gridTemplateColumns: { xs: '1fr 1fr', sm: '1fr 1fr 1fr', md: '1fr 1fr 1fr 1fr' }, // จัดเลย์เอาต์เป็น Grid
+                  gap: 4,
+                  mt: 4,
+                }}
+              >
                 {skillCategories.map((skill) => (
-                  <Grid item xs={6} sm={4} md={3} key={skill.name}>
-                      <Box sx={{ textAlign: 'center', mb: 3 }}>
-                        <Paper
-                          elevation={0}
-                          sx={{
-                            bgcolor: 'transparent',
-                            p: 3,
-                            borderRadius: '25px',
-                            height: '100%',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            transition: 'transform 0.3s',
-                            '&:hover': {
-                              transform: 'translateY(-5px)',
-                            },
-                            cursor: 'pointer',
-                            border: '1px solid rgba(255, 255, 255, 0.2)',
-                          }}
-                        >
-                          <Typography variant="subtitle1" fontWeight="bold" sx={{ textTransform: 'uppercase' }}>
-                            {skill.name}
-                          </Typography>
-                        </Paper>
-                      </Box>
-                  </Grid>
+                  <Box key={skill.name} sx={{ textAlign: 'center', mb: 3 }}>
+                    <Paper
+                      elevation={0}
+                      sx={{
+                        bgcolor: 'transparent',
+                        p: 3,
+                        borderRadius: '25px',
+                        height: '100%',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        transition: 'transform 0.3s',
+                        '&:hover': {
+                          transform: 'translateY(-5px)',
+                        },
+                        cursor: 'pointer',
+                        border: '1px solid rgba(255, 255, 255, 0.2)',
+                      }}
+                    >
+                      <Typography variant="subtitle1" fontWeight="bold" sx={{ textTransform: 'uppercase' }}>
+                        {skill.name}
+                      </Typography>
+                    </Paper>
+                  </Box>
                 ))}
-              </Grid>
+              </Box>
             </Box>
           </Box>
         </Box>
       </Container>
 
       <Box
-              sx={{
-                width: '85%',
-                borderTop: '1px solid rgb(110, 110, 110)',
-                margin: '70px auto 0',
-              }}
-            />
-          </Box>
-
-    
+        sx={{
+          width: '85%',
+          borderTop: '1px solid rgb(110, 110, 110)',
+          margin: '70px auto 0',
+        }}
+      />
+    </Box>
   );
 };
 
